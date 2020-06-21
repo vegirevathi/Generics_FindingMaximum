@@ -25,4 +25,25 @@ public class findMaximumTest {
         Integer max = findMaximum.analyzeMaximum( 10,20,30 );
         Assert.assertEquals(30,(int)max);
     }
+
+    @Test
+    public void maximumFloat_at_firstPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        Double max = findMaximum.analyzeFloatMax(4.2,2.5,3.8);
+        Assert.assertEquals((Double) 4.2,(Double)max);
+    }
+
+    @Test
+    public void maximumFloat_at_secondPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        Double max = findMaximum.analyzeFloatMax(4.2,5.2,3.8);
+        Assert.assertEquals((Double) 5.2,(Double)max);
+    }
+
+    @Test
+    public void maximumFloat_at_thirdPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        Double max = findMaximum.analyzeFloatMax(4.2,2.5,7.8);
+        Assert.assertEquals((Double) 7.8,(Double)max);
+    }
 }
