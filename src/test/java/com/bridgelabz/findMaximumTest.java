@@ -6,65 +6,29 @@ import org.junit.Test;
 public class findMaximumTest {
 
     @Test
-    public void maximumInteger_at_firstPosition() {
-        FindMaximum findMaximum = new FindMaximum(40,20,30);
-        Integer max = findMaximum.analyzeMaximum( 40,20,30 );
-        Assert.assertEquals(40,(int)max);
-    }
-
-    @Test
     public void maximumInteger_at_secondPosition() {
-        FindMaximum findMaximum = new FindMaximum(10,40,30);
-        Integer max = findMaximum.analyzeMaximum( 10,40,30 );
-        Assert.assertEquals(40,(int)max);
+        FindMaximum findMaximum = new FindMaximum();
+        Integer[] array = {10, 30, 20, 71, 5, 27, 88, 36};
+        Integer max = findMaximum.analyzeMaximum(array);
+        Assert.assertEquals(88,(int)max);
     }
 
-    @Test
-    public void maximumInteger_at_thirdPosition() {
-        FindMaximum findMaximum = new FindMaximum(10,20,30);
-        Integer max = findMaximum.analyzeMaximum( 10,20,30 );
-        Assert.assertEquals(30,(int)max);
-    }
 
     @Test
     public void maximumFloat_at_firstPosition() {
-        FindMaximum findMaximum = new FindMaximum(4.2,2.5,3.8);
-        Double max = findMaximum.analyzeMaximum(4.2,2.5,3.8);
-        Assert.assertEquals((Double) 4.2,(Double)max);
-    }
-
-    @Test
-    public void maximumFloat_at_secondPosition() {
-        FindMaximum findMaximum = new FindMaximum(2.2,4.2,3.8);
-        Double max = findMaximum.analyzeMaximum(2.2,4.2,3.8);
-        Assert.assertEquals((Double) 4.2,(Double)max);
-    }
-
-    @Test
-    public void maximumFloat_at_thirdPosition() {
-        FindMaximum findMaximum = new FindMaximum(4.2,2.5,7.8);
-        Double max = findMaximum.analyzeMaximum(4.2,2.5,7.8);
+        FindMaximum findMaximum = new FindMaximum();
+        Double[] array = {1.2, 2.1, 3.4, 1.5, 7.8, 6.4, 2.89};
+        Double max = findMaximum.analyzeMaximum(array);
         Assert.assertEquals((Double) 7.8,(Double)max);
     }
 
+
     @Test
     public void maximumCharacter_at_firstPosition() {
-        FindMaximum findMaximum = new FindMaximum("Pineapple","Peach","Banana");
-        String max = findMaximum.analyzeMaximum("Pineapple","Peach", "Banana");
+        FindMaximum findMaximum = new FindMaximum();
+        String[] array = {"Pineapple","Orange","Apple","Banana"};
+        String max = findMaximum.analyzeMaximum(array);
         Assert.assertEquals((String) "Pineapple",(String)max);
     }
 
-    @Test
-    public void maximumString_at_secondPosition() {
-        FindMaximum findMaximum = new FindMaximum("Apple","Cat","Banana");
-        String max = findMaximum.analyzeMaximum("Apple","Cat", "Banana");
-        Assert.assertEquals((String) "Cat",(String)max);
-    }
-
-    @Test
-    public void maximumString_at_thirdPosition() {
-        FindMaximum findMaximum = new FindMaximum("Apple","Peach","Pineapple");
-        String max = findMaximum.analyzeMaximum("Apple","Peach", "Yak");
-        Assert.assertEquals((String) "Yak",(String)max);
-    }
 }
