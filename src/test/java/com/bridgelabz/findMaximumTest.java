@@ -46,4 +46,25 @@ public class findMaximumTest {
         Double max = findMaximum.analyzeFloatMax(4.2,2.5,7.8);
         Assert.assertEquals((Double) 7.8,(Double)max);
     }
+
+    @Test
+    public void maximumCharacter_at_firstPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        String max = findMaximum.analyzeStringMax("Pineapple","Peach", "Banana");
+        Assert.assertEquals((String) "Pineapple",(String)max);
+    }
+
+    @Test
+    public void maximumString_at_secondPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        String max = findMaximum.analyzeStringMax("Apple","Cat", "Banana");
+        Assert.assertEquals((String) "Cat",(String)max);
+    }
+
+    @Test
+    public void maximumString_at_thirdPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        String max = findMaximum.analyzeStringMax("Apple","Peach", "Yak");
+        Assert.assertEquals((String) "Yak",(String)max);
+    }
 }
