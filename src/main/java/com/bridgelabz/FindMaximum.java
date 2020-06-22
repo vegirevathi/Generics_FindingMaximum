@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class FindMaximum<T> {
 
-    public static <T extends Comparable<T>> T analyzeMaximum(T[] array) {
+    public static <T extends Comparable<T>> T analyzeMaximum(T... array) {
         Arrays.sort(array);
         return array[array.length - 1];
     }
